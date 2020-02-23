@@ -78,7 +78,7 @@ module Schedule
   end
 
   def self.calculate_interval(interval : Symbol)
-    now = Time.now
+    now = Time.local
     case interval
     when :minute
       now.at_end_of_minute - now
